@@ -22,15 +22,30 @@ export function LinkHub() {
     const cleanups: Array<() => void> = [];
 
     const ctx = gsap.context(() => {
-      const timeline = gsap.timeline({ defaults: { ease: "power3.out" } });
+      gsap.set(".card", {
+        y: 90,
+        opacity: 0,
+        rotateX: -16,
+        rotateY: 9,
+        scale: 0.92,
+        filter: "blur(14px)",
+        transformPerspective: 1100,
+        transformOrigin: "50% 100%",
+      });
 
-      timeline
+      gsap.set(".section-head", { y: 42, opacity: 0, filter: "blur(12px)" });
+      gsap.set(".footer", { y: 24, opacity: 0 });
+
+      const intro = gsap.timeline({ defaults: { ease: "power3.out" } });
+      intro
         .from(".nav", { y: -18, opacity: 0, duration: 0.55 })
-        .from(".eyebrow", { y: 10, opacity: 0, duration: 0.45 }, "-=0.22")
-        .from("h1", { y: 24, opacity: 0, filter: "blur(10px)", duration: 0.75 }, "-=0.18")
-        .from(".lead", { y: 16, opacity: 0, duration: 0.55 }, "-=0.35")
-        .from(".cta .btn", { y: 14, opacity: 0, stagger: 0.08, duration: 0.45 }, "-=0.25")
-        .from(".portrait-card", { y: 22, opacity: 0, rotateX: -4, duration: 0.8 }, "-=0.65");
+        .from(".ambient-orb", { scale: 0.2, opacity: 0, stagger: 0.12, duration: 0.9 }, "-=0.35")
+        .from(".eyebrow", { y: 10, opacity: 0, duration: 0.45 }, "-=0.55")
+        .from("h1", { y: 30, opacity: 0, filter: "blur(12px)", duration: 0.85 }, "-=0.2")
+        .from(".lead", { y: 18, opacity: 0, duration: 0.55 }, "-=0.35")
+        .from(".cta .btn", { y: 16, opacity: 0, stagger: 0.08, duration: 0.45 }, "-=0.25")
+        .from(".portrait-card", { y: 32, opacity: 0, rotateX: -7, rotateY: -6, duration: 0.9 }, "-=0.7")
+        .from(".scroll-cue", { y: -8, opacity: 0, duration: 0.5 }, "-=0.35");
 
       gsap.to(".portrait", {
         backgroundPosition: "55% 42%, 62% 48%, 0 0",
@@ -40,64 +55,123 @@ export function LinkHub() {
         ease: "sine.inOut",
       });
 
-      gsap.from(".scan", {
-        scaleX: 0,
-        transformOrigin: "center",
-        duration: 0.9,
-        ease: "power3.out",
+      gsap.to(".portrait-image", {
+        scale: 1.11,
+        yPercent: -4,
+        ease: "none",
         scrollTrigger: {
-          trigger: ".scan",
-          start: "top 88%",
-          once: true,
+          trigger: ".hero",
+          start: "top top",
+          end: "bottom top",
+          scrub: 0.9,
         },
       });
 
-      gsap.from(".section-head", {
-        y: 22,
-        opacity: 0,
-        duration: 0.55,
-        ease: "power3.out",
+      gsap.to(".scroll-progress span", {
+        scaleY: 1,
+        ease: "none",
+        scrollTrigger: {
+          trigger: root,
+          start: "top top",
+          end: "bottom bottom",
+          scrub: 0.2,
+        },
+      });
+
+      const heroScroll = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".hero",
+          start: "top top",
+          end: "bottom 25%",
+          scrub: 0.85,
+        },
+      });
+
+      heroScroll
+        .to(".hero-copy", { y: -46, opacity: 0.72, filter: "blur(1.5px)", ease: "none" }, 0)
+        .to(".portrait-card", { y: -72, rotateZ: 1.6, scale: 0.96, ease: "none" }, 0)
+        .to(".ambient-orb.one", { xPercent: 22, yPercent: 20, scale: 1.2, ease: "none" }, 0)
+        .to(".ambient-orb.two", { xPercent: -18, yPercent: -14, scale: 1.1, ease: "none" }, 0)
+        .to(".scroll-cue", { opacity: 0, y: 18, ease: "none" }, 0);
+
+      gsap.fromTo(
+        ".scan",
+        { scaleX: 0, opacity: 0, filter: "blur(6px)" },
+        {
+          scaleX: 1,
+          opacity: 1,
+          filter: "blur(0px)",
+          transformOrigin: "center",
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ".scan",
+            start: "top 90%",
+            end: "top 62%",
+            scrub: 0.5,
+          },
+        },
+      );
+
+      const reveal = gsap.timeline({
         scrollTrigger: {
           trigger: ".section",
           start: "top 82%",
-          once: true,
+          end: "top 34%",
+          scrub: 0.75,
         },
       });
 
-      gsap.from(".card", {
-        y: 28,
-        opacity: 0,
-        filter: "blur(8px)",
-        stagger: 0.1,
-        duration: 0.65,
-        ease: "power3.out",
+      reveal
+        .to(".section-head", { y: 0, opacity: 1, filter: "blur(0px)", duration: 0.25, ease: "power2.out" })
+        .to(
+          ".card",
+          {
+            y: 0,
+            opacity: 1,
+            rotateX: 0,
+            rotateY: 0,
+            scale: 1,
+            filter: "blur(0px)",
+            stagger: 0.12,
+            duration: 0.68,
+            ease: "back.out(1.45)",
+          },
+          "-=0.08",
+        )
+        .to(".card .icon", { boxShadow: "0 0 32px rgba(113, 112, 255, 0.38)", stagger: 0.08, duration: 0.25 }, "-=0.38");
+
+      gsap.to(".links", {
+        y: -18,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".section",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1,
+        },
+      });
+
+      gsap.to(".card", {
+        backgroundPosition: "140% 50%",
+        stagger: 0.05,
+        ease: "none",
         scrollTrigger: {
           trigger: ".links",
-          start: "top 82%",
-          once: true,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1,
         },
       });
 
-      gsap.from(".footer", {
-        y: 16,
-        opacity: 0,
+      gsap.to(".footer", {
+        y: 0,
+        opacity: 1,
         duration: 0.5,
         ease: "power2.out",
         scrollTrigger: {
           trigger: ".footer",
           start: "top 94%",
           once: true,
-        },
-      });
-
-      gsap.to(".portrait-card", {
-        y: -18,
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".hero",
-          start: "top top",
-          end: "bottom top",
-          scrub: 0.7,
         },
       });
 
@@ -144,10 +218,17 @@ export function LinkHub() {
 
   return (
     <div ref={rootRef} className="site-shell">
+      <div className="scroll-progress" aria-hidden="true"><span /></div>
+      <div className="ambient-orb one" aria-hidden="true" />
+      <div className="ambient-orb two" aria-hidden="true" />
       <div className="wrap">
         <SiteNav />
         <main id="top">
           <Hero />
+          <div className="scroll-cue" aria-hidden="true">
+            <span>scroll</span>
+            <i />
+          </div>
           <div className="scan" />
           <LinkSection />
         </main>

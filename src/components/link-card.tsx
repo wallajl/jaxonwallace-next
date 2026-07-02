@@ -6,7 +6,7 @@ type LinkCardProps = {
 
 export function LinkCard({ link }: LinkCardProps) {
   return (
-    <a className="card magnetic-card" href={link.href} target="_blank" rel="noreferrer">
+    <a className="card magnetic-card motion-card" href={link.href} target="_blank" rel="noreferrer">
       <div className="top">
         <span className="icon" aria-hidden="true">
           {link.icon}

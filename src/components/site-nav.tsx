@@ -9,6 +9,8 @@ export function SiteNav() {
       </a>
       <div className="navlinks">
         <a href="#links">Links</a>
+        <a href="#about">About</a>
+        <a href="#home-assistant">Home Assistant</a>
         <a className="keep" href="https://github.com/wallajl" target="_blank" rel="noreferrer">
           GitHub
         </a>

@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Hero } from "./hero";
 import { LinkSection } from "./link-section";
+import { ProfileSections } from "./profile-sections";
 import { SiteNav } from "./site-nav";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -22,7 +23,7 @@ export function LinkHub() {
     const cleanups: Array<() => void> = [];
 
     const ctx = gsap.context(() => {
-      gsap.set(".card", {
+      gsap.set(".motion-card", {
         y: 90,
         opacity: 0,
         rotateX: -16,
@@ -125,7 +126,7 @@ export function LinkHub() {
       reveal
         .to(".section-head", { y: 0, opacity: 1, filter: "blur(0px)", duration: 0.25, ease: "power2.out" })
         .to(
-          ".card",
+          ".motion-card",
           {
             y: 0,
             opacity: 1,
@@ -139,7 +140,7 @@ export function LinkHub() {
           },
           "-=0.08",
         )
-        .to(".card .icon", { boxShadow: "0 0 32px rgba(113, 112, 255, 0.38)", stagger: 0.08, duration: 0.25 }, "-=0.38");
+        .to(".motion-card .icon", { boxShadow: "0 0 32px rgba(113, 112, 255, 0.38)", stagger: 0.08, duration: 0.25 }, "-=0.38");
 
       gsap.to(".links", {
         y: -18,
@@ -152,7 +153,7 @@ export function LinkHub() {
         },
       });
 
-      gsap.to(".card", {
+      gsap.to(".motion-card", {
         backgroundPosition: "140% 50%",
         stagger: 0.05,
         ease: "none",
@@ -232,9 +233,10 @@ export function LinkHub() {
           </div>
           <div className="scan" />
           <LinkSection />
+          <ProfileSections />
         </main>
         <footer className="footer">
-          © {new Date().getFullYear()} Jaxon Wallace · built with Next.js, React, and GSAP
+          © {new Date().getFullYear()} Jaxon Wallace · BMS, smart buildings, Home Assistant, and web projects
         </footer>
       </div>
     </div>

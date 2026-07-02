@@ -43,7 +43,8 @@ export function LinkHub() {
         .from(".eyebrow", { y: 10, opacity: 0, duration: 0.45 }, "-=0.55")
         .from("h1", { y: 30, opacity: 0, filter: "blur(12px)", duration: 0.85 }, "-=0.2")
         .from(".lead", { y: 18, opacity: 0, duration: 0.55 }, "-=0.35")
-        .from(".cta .btn", { y: 16, opacity: 0, stagger: 0.08, duration: 0.45 }, "-=0.25")
+        .from(".quick-facts span", { y: 12, opacity: 0, stagger: 0.06, duration: 0.36 }, "-=0.28")
+        .from(".cta .btn", { y: 16, opacity: 0, stagger: 0.08, duration: 0.45 }, "-=0.2")
         .from(".portrait-card", { y: 32, opacity: 0, rotateX: -7, rotateY: -6, duration: 0.9 }, "-=0.7")
         .from(".scroll-cue", { y: -8, opacity: 0, duration: 0.5 }, "-=0.35");
 

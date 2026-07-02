@@ -5,7 +5,7 @@ export function Hero() {
     <section className="hero" aria-label="Intro">
       <div className="hero-copy">
         <span className="eyebrow">
-          <span className="dot" aria-hidden="true" /> / online hub · Adelaide
+          <span className="dot" aria-hidden="true" /> BMS Engineer · Adelaide
         </span>
         <h1>
           Jaxon
@@ -13,10 +13,15 @@ export function Hero() {
           <span className="grad">Wallace.</span>
         </h1>
         <p className="lead">
-          A cleaner, faster Linktree-style homepage for socials, GitHub projects,
-          and professional profiles — rebuilt as a premium Next.js starter ready
-          for Vercel.
+          Building Management Systems engineer in Adelaide, working with smart
+          building controls, HVAC automation, and connected infrastructure at
+          Schneider Electric.
         </p>
+        <div className="quick-facts" aria-label="Professional highlights">
+          <span>Schneider Electric</span>
+          <span>BMS / controls</span>
+          <span>St Pat&apos;s Tech old scholar</span>
+        </div>
         <div className="cta">
           <a className="btn primary" href="#links">
             Open links <span>↓</span>
@@ -39,14 +44,14 @@ export function Hero() {
         </div>
         <div className="status">
           <span>
-            <b>status</b>
+            <b>focus</b>
             <br />
-            <span className="ok">ready for Vercel</span>
+            <span className="ok">smart buildings</span>
           </span>
           <span>
-            next.js / react
+            bms engineer
             <br />
-            gsap polish
+            adelaide sa
           </span>
         </div>
       </aside>

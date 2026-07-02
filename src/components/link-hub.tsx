@@ -25,7 +25,7 @@ export function LinkHub() {
         .from("h1", { y: 24, opacity: 0, filter: "blur(10px)", duration: 0.75 }, "-=0.18")
         .from(".lead", { y: 16, opacity: 0, duration: 0.55 }, "-=0.35")
         .from(".cta .btn", { y: 14, opacity: 0, stagger: 0.08, duration: 0.45 }, "-=0.25")
-        .from(".portrait-card", { x: 32, opacity: 0, rotateY: -8, duration: 0.8 }, "-=0.65")
+        .from(".portrait-card", { y: 22, opacity: 0, rotateX: -4, duration: 0.8 }, "-=0.65")
         .from(".section-head", { y: 18, opacity: 0, duration: 0.45 }, "-=0.2")
         .from(".card", { y: 18, opacity: 0, stagger: 0.08, duration: 0.5 }, "-=0.2");
 

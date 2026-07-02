@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function Hero() {
   return (
     <section className="hero" aria-label="Intro">
@@ -24,8 +26,17 @@ export function Hero() {
           </a>
         </div>
       </div>
-      <aside className="portrait-card premium-panel" aria-label="Site status">
-        <div className="portrait" aria-label="Jaxon Wallace monogram" />
+      <aside className="portrait-card premium-panel" aria-label="Jaxon Wallace portrait and site status">
+        <div className="portrait" aria-label="Jaxon Wallace portrait">
+          <Image
+            className="portrait-image"
+            src="/jaxon-portrait.jpeg"
+            alt="Portrait of Jaxon Wallace"
+            fill
+            priority
+            sizes="(max-width: 860px) min(100vw - 42px, 430px), 430px"
+          />
+        </div>
         <div className="status">
           <span>
             <b>status</b>

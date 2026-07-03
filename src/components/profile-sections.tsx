@@ -6,10 +6,25 @@ const workFocus = [
 ];
 
 const homeAssistantServices = [
-  "Home Assistant dashboards and automations",
-  "Lighting, climate, and sensor integrations",
-  "Local-first smart home control",
-  "Alerts, routines, and practical quality-of-life automations",
+  "Dashboards that make sense on wall tablets and phones",
+  "Lighting, climate, sensors, cameras, and presence integrations",
+  "Local-first automations with practical notifications and fail-safes",
+  "Remote-access, backups, DNS, and reliability checks",
+];
+
+const servicePackages = [
+  {
+    name: "Starter setup",
+    detail: "Get Home Assistant cleanly installed, backed up, remotely reachable, and ready for devices.",
+  },
+  {
+    name: "Dashboard polish",
+    detail: "Build room dashboards, tablet views, status cards, and automations that are actually usable day-to-day.",
+  },
+  {
+    name: "Automation fixes",
+    detail: "Untangle flaky automations, alerts, device naming, integrations, and smart-home routines.",
+  },
 ];
 
 const projects = [
@@ -17,6 +32,13 @@ const projects = [
   "GitHub experiments and tooling",
   "Home lab / smart home workflows",
   "Automation ideas that connect real equipment to clean interfaces",
+];
+
+const timeline = [
+  ["Now", "BMS Engineer at Schneider Electric"],
+  ["2024", "BMS Engineer at Automated Air"],
+  ["2020–24", "Apprentice pathway and trade experience"],
+  ["2021", "St Patrick's Technical College graduate"],
 ];
 
 function MiniCard({ title, body }: { title: string; body: string }) {
@@ -48,6 +70,21 @@ export function ProfileSections() {
             <span><b>BMS</b> smart buildings</span>
             <span><b>SA</b> Adelaide based</span>
           </div>
+        </div>
+      </section>
+
+      <section className="content-section timeline-section" id="timeline">
+        <div className="section-head">
+          <h2>Experience path</h2>
+          <span className="mono">hands-on trade background → smart buildings</span>
+        </div>
+        <div className="timeline motion-card">
+          {timeline.map(([date, label]) => (
+            <div className="timeline-item" key={date}>
+              <span>{date}</span>
+              <p>{label}</p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -83,6 +120,15 @@ export function ProfileSections() {
               <span key={service}>{service}</span>
             ))}
           </div>
+        </div>
+        <div className="package-grid">
+          {servicePackages.map((pack) => (
+            <article className="package-card motion-card" key={pack.name}>
+              <span className="kicker">{"// service"}</span>
+              <h3>{pack.name}</h3>
+              <p>{pack.detail}</p>
+            </article>
+          ))}
         </div>
       </section>
 

@@ -618,6 +618,91 @@ h2 {
   font-size: 15px;
 }
 
+
+.timeline,
+.package-card {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.052), rgba(113, 112, 255, 0.05) 44%, rgba(16, 185, 129, 0.04));
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.34);
+  overflow: hidden;
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+}
+
+.timeline-item {
+  position: relative;
+  padding: 22px;
+  min-height: 140px;
+  border-right: 1px solid rgba(255, 255, 255, 0.065);
+}
+
+.timeline-item:last-child {
+  border-right: 0;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 22px;
+  top: 62px;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: var(--green);
+  box-shadow: 0 0 22px rgba(16, 185, 129, 0.65);
+}
+
+.timeline-item span {
+  display: block;
+  color: #fff;
+  font: 650 24px / 1 var(--font-geist-sans), system-ui, sans-serif;
+  letter-spacing: -0.5px;
+  margin-bottom: 34px;
+}
+
+.timeline-item p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+  font-size: 14px;
+}
+
+.package-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.package-card {
+  min-height: 190px;
+  padding: 20px;
+}
+
+.package-card h3 {
+  position: relative;
+  margin: 0 0 12px;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: -0.3px;
+  font-weight: 560;
+}
+
+.package-card p {
+  position: relative;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.62;
+  font-size: 14px;
+}
+
 .service-panel,
 .contact-panel {
   display: grid;
@@ -832,6 +917,21 @@ h2 {
   .contact-panel,
   .service-list {
     grid-template-columns: 1fr;
+  }
+
+  .timeline,
+  .package-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-item {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.065);
+    min-height: 120px;
+  }
+
+  .timeline-item:last-child {
+    border-bottom: 0;
   }
 
   .contact-actions {

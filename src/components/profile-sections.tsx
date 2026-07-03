@@ -41,6 +41,30 @@ const timeline = [
   ["2021", "St Patrick's Technical College graduate"],
 ];
 
+const contactMethods = [
+  {
+    label: "Discord",
+    value: "Slimdog",
+    detail: "Best for quick messages, smart-home builds, and project chat.",
+    href: null,
+    featured: true,
+  },
+  {
+    label: "LinkedIn",
+    value: "Jaxon Wallace",
+    detail: "Best for professional BMS, controls, and work conversations.",
+    href: "https://www.linkedin.com/in/jaxon-wallace",
+    featured: false,
+  },
+  {
+    label: "GitHub",
+    value: "@wallajl",
+    detail: "Code, website builds, Home Assistant experiments, and tooling.",
+    href: "https://github.com/wallajl",
+    featured: false,
+  },
+];
+
 function MiniCard({ title, body }: { title: string; body: string }) {
   return (
     <article className="info-card magnetic-card motion-card">
@@ -147,20 +171,40 @@ export function ProfileSections() {
       <section className="content-section contact-section" id="contact">
         <div className="contact-panel motion-card">
           <div>
-            <span className="kicker">{"// best way to reach me"}</span>
-            <h2>For work, start with LinkedIn. For builds, check GitHub.</h2>
+            <span className="kicker">{"// contact channel"}</span>
+            <h2>Message me on Discord for the fastest reply.</h2>
             <p>
-              This page keeps the useful links in one place: professional profile, socials,
-              personal projects, and smart-home / automation work.
+              This page keeps the useful links in one place: Discord for quick contact,
+              LinkedIn for professional work, and GitHub for builds, experiments, and projects.
             </p>
           </div>
-          <div className="contact-actions">
-            <a className="btn primary" href="https://www.linkedin.com/in/jaxon-wallace" target="_blank" rel="noreferrer">
-              LinkedIn <span>↗</span>
-            </a>
-            <a className="btn" href="https://github.com/wallajl" target="_blank" rel="noreferrer">
-              GitHub <span>↗</span>
-            </a>
+          <div className="contact-stack" aria-label="Contact options">
+            {contactMethods.map((method) => {
+              const content = (
+                <>
+                  <span className="contact-label">{method.label}</span>
+                  <strong>{method.value}</strong>
+                  <small>{method.detail}</small>
+                </>
+              );
+
+              return method.href ? (
+                <a
+                  className={`contact-method ${method.featured ? "featured" : ""}`}
+                  href={method.href}
+                  key={method.label}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {content}
+                  <span className="contact-arrow">↗</span>
+                </a>
+              ) : (
+                <div className={`contact-method ${method.featured ? "featured" : ""}`} key={method.label}>
+                  {content}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

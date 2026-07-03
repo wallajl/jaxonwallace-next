@@ -31,7 +31,7 @@ const projects = [
   "Website builds",
   "GitHub projects",
   "Home lab",
-  "Automation workflows",
+  "Claude-assisted workflows",
 ];
 
 const timeline = [

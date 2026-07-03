@@ -13,9 +13,8 @@ export function Hero() {
           <span className="grad">Wallace.</span>
         </h1>
         <p className="lead">
-          Building Management Systems engineer in Adelaide, working with smart
-          building controls, HVAC automation, and connected infrastructure at
-          Schneider Electric.
+          Adelaide BMS engineer working with smart buildings, HVAC controls,
+          automation, and Home Assistant.
         </p>
         <div className="quick-facts" aria-label="Professional highlights">
           <span>Schneider Electric</span>

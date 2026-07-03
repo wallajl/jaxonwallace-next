@@ -520,7 +520,7 @@ h2 {
 
 
 .content-section {
-  padding: 54px 0;
+  padding: 38px 0;
   scroll-margin-top: 28px;
 }
 
@@ -599,8 +599,8 @@ h2 {
 }
 
 .info-card {
-  min-height: 148px;
-  padding: 18px;
+  min-height: 112px;
+  padding: 16px;
 }
 
 .kicker {
@@ -639,7 +639,7 @@ h2 {
 .timeline-item {
   position: relative;
   padding: 22px;
-  min-height: 140px;
+  min-height: 118px;
   border-right: 1px solid rgba(255, 255, 255, 0.065);
 }
 
@@ -682,8 +682,8 @@ h2 {
 }
 
 .package-card {
-  min-height: 190px;
-  padding: 20px;
+  min-height: 150px;
+  padding: 18px;
 }
 
 .package-card h3 {
@@ -993,7 +993,7 @@ h2 {
   }
 
   .content-section {
-    padding: 36px 0;
+    padding: 28px 0;
   }
 
   .info-grid,
@@ -1012,7 +1012,7 @@ h2 {
   .timeline-item {
     border-right: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.065);
-    min-height: 120px;
+    min-height: 108px;
   }
 
   .timeline-item:last-child {

@@ -1,37 +1,37 @@
 const workFocus = [
-  "Building Management Systems",
-  "HVAC controls and automation",
-  "Smart building integrations",
-  "Commissioning and fault finding",
+  "BMS",
+  "HVAC controls",
+  "Smart buildings",
+  "Fault finding",
 ];
 
 const homeAssistantServices = [
-  "Dashboards that make sense on wall tablets and phones",
-  "Lighting, climate, sensors, cameras, and presence integrations",
-  "Local-first automations with practical notifications and fail-safes",
-  "Remote-access, backups, DNS, and reliability checks",
+  "Dashboards",
+  "Lighting / climate",
+  "Automations",
+  "Remote access / backups",
 ];
 
 const servicePackages = [
   {
     name: "Starter setup",
-    detail: "Get Home Assistant cleanly installed, backed up, remotely reachable, and ready for devices.",
+    detail: "Install, backup, remote access, and device basics.",
   },
   {
     name: "Dashboard polish",
-    detail: "Build room dashboards, tablet views, status cards, and automations that are actually usable day-to-day.",
+    detail: "Clean phone, tablet, and room views.",
   },
   {
     name: "Automation fixes",
-    detail: "Untangle flaky automations, alerts, device naming, integrations, and smart-home routines.",
+    detail: "Fix flaky routines, alerts, devices, and integrations.",
   },
 ];
 
 const projects = [
-  "Personal website and custom web builds",
-  "GitHub experiments and tooling",
-  "Home lab / smart home workflows",
-  "Automation ideas that connect real equipment to clean interfaces",
+  "Personal sites",
+  "GitHub tools",
+  "Home lab workflows",
+  "Automation ideas",
 ];
 
 const timeline = [
@@ -45,21 +45,21 @@ const contactMethods = [
   {
     label: "Discord",
     value: "Slimdog",
-    detail: "Best for quick messages, smart-home builds, and project chat.",
+    detail: "Fastest reply.",
     href: null,
     featured: true,
   },
   {
     label: "LinkedIn",
     value: "Jaxon Wallace",
-    detail: "Best for professional BMS, controls, and work conversations.",
+    detail: "Work and BMS.",
     href: "https://www.linkedin.com/in/jaxon-wallace",
     featured: false,
   },
   {
     label: "GitHub",
     value: "@wallajl",
-    detail: "Code, website builds, Home Assistant experiments, and tooling.",
+    detail: "Code and builds.",
     href: "https://github.com/wallajl",
     featured: false,
   },
@@ -84,10 +84,8 @@ export function ProfileSections() {
         </div>
         <div className="about-panel motion-card">
           <p>
-            Jaxon Wallace is an Adelaide-based BMS Engineer working in smart building controls,
-            HVAC automation, and connected infrastructure. Currently at Schneider Electric, he
-            has a trade and technical background through St Patrick&apos;s Technical College and
-            hands-on experience across building systems, commissioning, and automation work.
+            Adelaide-based BMS Engineer at Schneider Electric, focused on smart
+            buildings, HVAC controls, commissioning, and useful automation.
           </p>
           <div className="stat-row" aria-label="Professional highlights">
             <span><b>2025</b> Schneider Electric</span>
@@ -132,11 +130,10 @@ export function ProfileSections() {
         <div className="service-panel motion-card">
           <div>
             <span className="kicker">{"// practical smart-home builds"}</span>
-            <h3>Home automation that feels reliable, not gimmicky.</h3>
+            <h3>Smart home setups that actually behave.</h3>
             <p>
-              I can help set up Home Assistant automations, dashboards, device integrations,
-              notifications, and local smart-home workflows — the kind of stuff that makes a
-              house easier to live in instead of just adding more apps.
+              Home Assistant dashboards, automations, integrations, alerts, and
+              remote access — kept clean and reliable.
             </p>
           </div>
           <div className="service-list">
@@ -174,8 +171,7 @@ export function ProfileSections() {
             <span className="kicker">{"// contact channel"}</span>
             <h2>Message me on Discord for the fastest reply.</h2>
             <p>
-              This page keeps the useful links in one place: Discord for quick contact,
-              LinkedIn for professional work, and GitHub for builds, experiments, and projects.
+              Discord for quick contact. LinkedIn for work. GitHub for builds.
             </p>
           </div>
           <div className="contact-stack" aria-label="Contact options">

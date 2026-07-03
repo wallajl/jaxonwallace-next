@@ -8,9 +8,9 @@
   --soft: #d0d6e0;
   --line: rgba(255, 255, 255, 0.08);
   --line2: rgba(255, 255, 255, 0.05);
-  --violet: #7170ff;
+  --violet: #6d74ff;
   --indigo: #5e6ad2;
-  --green: #10b981;
+  --green: #22c55e;
   --shadow: 0 24px 80px rgba(0, 0, 0, 0.48);
 }
 
@@ -83,7 +83,7 @@ body::selection {
   pointer-events: none;
   border-radius: 999px;
   filter: blur(4px);
-  opacity: 0.62;
+  opacity: 0.38;
   mix-blend-mode: screen;
 }
 
@@ -110,10 +110,10 @@ body::selection {
   z-index: 0;
   pointer-events: none;
   background:
-    radial-gradient(circle at 14% 4%, rgba(113, 112, 255, 0.26), transparent 34rem),
-    radial-gradient(circle at 94% 10%, rgba(16, 185, 129, 0.16), transparent 32rem),
-    radial-gradient(circle at 88% 64%, rgba(16, 185, 129, 0.1), transparent 30rem),
-    radial-gradient(circle at 12% 58%, rgba(94, 106, 210, 0.1), transparent 32rem),
+    radial-gradient(circle at 14% 4%, rgba(113, 112, 255, 0.16), transparent 34rem),
+    radial-gradient(circle at 94% 10%, rgba(16, 185, 129, 0.10), transparent 32rem),
+    radial-gradient(circle at 88% 64%, rgba(16, 185, 129, 0.06), transparent 30rem),
+    radial-gradient(circle at 12% 58%, rgba(94, 106, 210, 0.06), transparent 32rem),
     linear-gradient(180deg, #090910 0%, #050607 42%, #050607 100%);
 }
 
@@ -123,7 +123,7 @@ body::selection {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.27;
+  opacity: 0.18;
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
@@ -165,10 +165,10 @@ a {
   height: 28px;
   border: 1px solid var(--line);
   border-radius: 9px;
-  background: linear-gradient(145deg, rgba(113, 112, 255, 0.32), rgba(255, 255, 255, 0.04));
+  background: linear-gradient(145deg, rgba(113, 112, 255, 0.20), rgba(255, 255, 255, 0.04));
   display: grid;
   place-items: center;
-  box-shadow: inset 0 0 18px rgba(113, 112, 255, 0.24);
+  box-shadow: inset 0 0 14px rgba(113, 112, 255, 0.14);
 }
 
 .mark span,
@@ -302,9 +302,9 @@ h1 {
 }
 
 .btn.primary {
-  background: linear-gradient(180deg, #7a7cff, #5e6ad2);
+  background: linear-gradient(180deg, #6970f5, #4f58c8);
   border-color: rgba(255, 255, 255, 0.18);
-  box-shadow: 0 12px 32px rgba(94, 106, 210, 0.32);
+  box-shadow: 0 10px 28px rgba(94, 106, 210, 0.22);
 }
 
 .btn:hover {
@@ -332,9 +332,9 @@ h1 {
   position: absolute;
   inset: -1px;
   border-radius: 28px;
-  background: linear-gradient(135deg, rgba(113, 112, 255, 0.65), transparent 30%, rgba(16, 185, 129, 0.28));
+  background: linear-gradient(135deg, rgba(113, 112, 255, 0.36), transparent 34%, rgba(16, 185, 129, 0.18));
   z-index: -1;
-  opacity: 0.5;
+  opacity: 0.42;
 }
 
 .portrait {
@@ -394,7 +394,7 @@ h1 {
 }
 
 .ok {
-  color: var(--green);
+  color: #8ee6b6;
 }
 
 .section {
@@ -436,7 +436,7 @@ h2 {
   border: 1px solid var(--line);
   border-radius: 18px;
   background:
-    linear-gradient(115deg, rgba(255, 255, 255, 0.045), rgba(113, 112, 255, 0.075) 42%, rgba(16, 185, 129, 0.055) 68%, rgba(255, 255, 255, 0.025));
+    linear-gradient(135deg, rgba(255, 255, 255, 0.052), rgba(255, 255, 255, 0.025));
   background-size: 220% 100%;
   padding: 17px;
   min-height: 116px;
@@ -533,7 +533,7 @@ h2 {
   border-radius: 22px;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.052), rgba(113, 112, 255, 0.05) 44%, rgba(16, 185, 129, 0.04));
-  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.34);
+  box-shadow: 0 18px 54px rgba(0, 0, 0, 0.30);
   overflow: hidden;
 }
 
@@ -545,8 +545,8 @@ h2 {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: radial-gradient(circle at 18% 0%, rgba(113, 112, 255, 0.16), transparent 38%),
-    radial-gradient(circle at 100% 100%, rgba(16, 185, 129, 0.11), transparent 42%);
+  background: radial-gradient(circle at 18% 0%, rgba(113, 112, 255, 0.10), transparent 38%),
+    radial-gradient(circle at 100% 100%, rgba(16, 185, 129, 0.07), transparent 42%);
 }
 
 .about-panel {
@@ -606,7 +606,7 @@ h2 {
 .kicker {
   position: relative;
   display: inline-flex;
-  color: var(--green);
+  color: #8ee6b6;
   font: 600 11px / 1 var(--font-geist-mono), ui-monospace, monospace;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -626,7 +626,7 @@ h2 {
   border-radius: 22px;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.052), rgba(113, 112, 255, 0.05) 44%, rgba(16, 185, 129, 0.04));
-  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.34);
+  box-shadow: 0 18px 54px rgba(0, 0, 0, 0.30);
   overflow: hidden;
 }
 
@@ -807,7 +807,7 @@ h2 {
 }
 
 .contact-label {
-  color: var(--green);
+  color: #8ee6b6;
   font: 650 11px / 1 var(--font-geist-mono), ui-monospace, monospace;
   letter-spacing: 0.12em;
   text-transform: uppercase;

@@ -5,7 +5,7 @@ export function Hero() {
     <section className="hero" aria-label="Intro">
       <div className="hero-copy">
         <span className="eyebrow">
-          <span className="dot" aria-hidden="true" /> BMS Engineer · Adelaide
+          <span className="dot" aria-hidden="true" /> BMS Engineer · Smart Building Controls
         </span>
         <h1>
           Jaxon
@@ -13,20 +13,20 @@ export function Hero() {
           <span className="grad">Wallace.</span>
         </h1>
         <p className="lead">
-          Adelaide BMS engineer working with smart buildings, HVAC controls,
-          automation, and Home Assistant.
+          Adelaide-based BMS Engineer focused on smart building controls,
+          HVAC automation, commissioning, and practical home automation.
         </p>
         <div className="quick-facts" aria-label="Professional highlights">
           <span>Schneider Electric</span>
-          <span>BMS / controls</span>
+          <span>BMS / HVAC controls</span>
           <span>St Pat&apos;s Tech old scholar</span>
         </div>
         <div className="cta">
           <a className="btn primary" href="#links">
-            Open links <span>↓</span>
+            View links <span>↓</span>
           </a>
           <a className="btn" href="https://www.linkedin.com/in/jaxon-wallace" target="_blank" rel="noreferrer">
-            LinkedIn <span>↗</span>
+            Professional profile <span>↗</span>
           </a>
         </div>
       </div>
@@ -43,9 +43,9 @@ export function Hero() {
         </div>
         <div className="status">
           <span>
-            <b>focus</b>
+            <b>specialty</b>
             <br />
-            <span className="ok">smart buildings</span>
+            <span className="ok">building controls</span>
           </span>
           <span>
             bms engineer

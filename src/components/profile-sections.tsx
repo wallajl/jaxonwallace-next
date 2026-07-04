@@ -1,6 +1,4 @@
-const workFocus = ["BMS Engineering", "HVAC Controls", "Commissioning", "Home Assistant"];
-
-const homeAssistantServices = ["Dashboards", "Automations", "Integrations", "Remote Access"];
+const workFocus = ["BMS Engineering", "HVAC Controls", "Commissioning", "Building Automation"];
 
 const contactMethods = [
   {
@@ -46,7 +44,7 @@ export function ProfileSections() {
         <div className="about-panel motion-card compact-panel">
           <p>
             Adelaide-based BMS Engineer at Schneider Electric, focused on building controls,
-            HVAC systems, commissioning, and practical automation.
+            HVAC systems, commissioning, and automation.
           </p>
           <div className="stat-row compact-stats" aria-label="Professional highlights">
             <span><b>BMS</b> Engineering</span>
@@ -59,27 +57,12 @@ export function ProfileSections() {
       <section className="content-section" id="focus">
         <div className="section-head">
           <h2>Focus</h2>
-          <span className="mono">controls / dashboards / reliability</span>
+          <span className="mono">controls / commissioning / automation</span>
         </div>
         <div className="info-grid compact-grid">
           {workFocus.map((item) => (
             <MiniCard key={item} title="focus" body={item} />
           ))}
-        </div>
-      </section>
-
-      <section className="content-section home-assistant-section" id="home-assistant">
-        <div className="service-panel motion-card compact-panel">
-          <div>
-            <span className="kicker">Home Assistant</span>
-            <h3>Reliable smart-home setups.</h3>
-            <p>Dashboards, automations, integrations, alerts, and remote access.</p>
-          </div>
-          <div className="service-list compact-list">
-            {homeAssistantServices.map((service) => (
-              <span key={service}>{service}</span>
-            ))}
-          </div>
         </div>
       </section>
 

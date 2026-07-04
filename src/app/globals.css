@@ -53,30 +53,6 @@ body::selection {
   isolation: isolate;
 }
 
-.scroll-progress {
-  position: fixed;
-  right: 14px;
-  top: 18px;
-  bottom: 18px;
-  z-index: 20;
-  width: 2px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.06);
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.scroll-progress span {
-  display: block;
-  width: 100%;
-  height: 100%;
-  transform: scaleY(0);
-  transform-origin: top;
-  border-radius: inherit;
-  background: linear-gradient(180deg, #8f8cff, #10b981);
-  box-shadow: 0 0 18px rgba(113, 112, 255, 0.7);
-}
-
 .ambient-orb {
   position: absolute;
   z-index: 0;
@@ -860,30 +836,6 @@ h2 {
   opacity: 0.9;
 }
 
-.scroll-cue {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  color: rgba(208, 214, 224, 0.52);
-  font: 500 11px / 1 var(--font-geist-mono), ui-monospace, monospace;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin: -34px 0 28px;
-}
-
-.scroll-cue i {
-  width: 42px;
-  height: 1px;
-  background: linear-gradient(90deg, rgba(113, 112, 255, 0.8), transparent);
-  animation: cuePulse 1.4s ease-in-out infinite;
-}
-
-@keyframes cuePulse {
-  0%, 100% { transform: scaleX(0.35); opacity: 0.35; }
-  50% { transform: scaleX(1); opacity: 1; }
-}
-
 @media (max-width: 1080px) {
   .hero {
     grid-template-columns: minmax(0, 1fr) minmax(260px, 0.72fr);
@@ -1012,17 +964,9 @@ h2 {
     justify-content: center;
   }
 
-  .scroll-progress {
-    display: none;
-  }
-
   .section {
     min-height: auto;
     padding: 26px 0 18px;
-  }
-
-  .scroll-cue {
-    margin: 8px 0 24px;
   }
 
   .content-section {

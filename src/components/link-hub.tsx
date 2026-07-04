@@ -69,17 +69,6 @@ export function LinkHub() {
         },
       });
 
-      gsap.to(".scroll-progress span", {
-        scaleY: 1,
-        ease: "none",
-        scrollTrigger: {
-          trigger: root,
-          start: "top top",
-          end: "bottom bottom",
-          scrub: 0.2,
-        },
-      });
-
       const heroScroll = gsap.timeline({
         scrollTrigger: {
           trigger: ".hero",
@@ -201,7 +190,6 @@ export function LinkHub() {
 
   return (
     <div ref={rootRef} className="site-shell">
-      <div className="scroll-progress" aria-hidden="true"><span /></div>
       <div className="ambient-orb one" aria-hidden="true" />
       <div className="ambient-orb two" aria-hidden="true" />
       <div className="wrap">

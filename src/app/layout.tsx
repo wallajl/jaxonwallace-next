@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://jaxonwallace.com"),
   title: "Jaxon Wallace | BMS Engineer",
   description:
-    "Jaxon Wallace — Adelaide BMS Engineer working with smart buildings, HVAC controls, Home Assistant services, GitHub projects, and social links.",
+    "Jaxon Wallace — Adelaide BMS Engineer working with smart building controls, HVAC automation, commissioning, GitHub projects, and social links.",
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Jaxon Wallace | BMS Engineer",
     description:
-      "Adelaide BMS Engineer focused on smart building controls, HVAC automation, Home Assistant services, and useful web projects.",
+      "Adelaide BMS Engineer focused on smart building controls, HVAC automation, commissioning, and useful web projects.",
     type: "website",
     images: [
       {
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Jaxon Wallace | BMS Engineer",
-    description: "Smart buildings, HVAC controls, Home Assistant services, GitHub projects, and links.",
+    description: "Smart buildings, HVAC controls, commissioning, GitHub projects, and links.",
     images: ["/og-image.png"],
   },
 };

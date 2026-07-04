@@ -14,7 +14,7 @@ export function Hero() {
         </h1>
         <p className="lead">
           Adelaide-based BMS Engineer focused on smart building controls,
-          HVAC automation, commissioning, and practical home automation.
+          HVAC automation, commissioning, and building automation.
         </p>
         <div className="quick-facts" aria-label="Professional highlights">
           <span>Schneider Electric</span>
@@ -23,7 +23,7 @@ export function Hero() {
         </div>
         <div className="cta">
           <a className="btn primary" href="#links">
-            View links <span>↓</span>
+            Links
           </a>
           <a className="btn" href="https://www.linkedin.com/in/jaxon-wallace" target="_blank" rel="noreferrer">
             Professional profile <span>↗</span>

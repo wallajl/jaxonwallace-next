@@ -1,45 +1,6 @@
-const workFocus = [
-  "BMS Engineering",
-  "HVAC controls",
-  "Smart Building Controls",
-  "Commissioning",
-];
+const workFocus = ["BMS Engineering", "HVAC Controls", "Commissioning", "Home Assistant"];
 
-const homeAssistantServices = [
-  "Dashboards",
-  "Lighting & Climate",
-  "Automations",
-  "Remote Access",
-];
-
-const servicePackages = [
-  {
-    name: "Starter setup",
-    detail: "Clean setup, backups, access, and device onboarding.",
-  },
-  {
-    name: "Dashboard polish",
-    detail: "Polished dashboards for phone, tablet, and rooms.",
-  },
-  {
-    name: "Automation fixes",
-    detail: "Troubleshoot automations, alerts, devices, and integrations.",
-  },
-];
-
-const projects = [
-  "Website builds",
-  "GitHub projects",
-  "Home lab",
-  "Claude-assisted workflows",
-];
-
-const timeline = [
-  ["Now", "BMS Engineer at Schneider Electric"],
-  ["2024", "BMS Engineer at Automated Air"],
-  ["2020–24", "Apprentice pathway and trade experience"],
-  ["2021", "St Patrick's Technical College graduate"],
-];
+const homeAssistantServices = ["Dashboards", "Automations", "Integrations", "Remote Access"];
 
 const contactMethods = [
   {
@@ -68,7 +29,7 @@ const contactMethods = [
 function MiniCard({ title, body }: { title: string; body: string }) {
   return (
     <article className="info-card magnetic-card motion-card">
-      <span className="kicker">{"// "}{title}</span>
+      <span className="kicker">{title}</span>
       <p>{body}</p>
     </article>
   );
@@ -82,40 +43,25 @@ export function ProfileSections() {
           <h2>About</h2>
           <span className="mono">BMS / HVAC / automation</span>
         </div>
-        <div className="about-panel motion-card">
+        <div className="about-panel motion-card compact-panel">
           <p>
-            Adelaide-based BMS Engineer at Schneider Electric, focused on smart
-            building controls, HVAC systems, commissioning, and automation.
+            Adelaide-based BMS Engineer at Schneider Electric, focused on building controls,
+            HVAC systems, commissioning, and practical automation.
           </p>
-          <div className="stat-row" aria-label="Professional highlights">
-            <span><b>2025</b> Schneider Electric</span>
-            <span><b>BMS</b> smart buildings</span>
-            <span><b>SA</b> Adelaide based</span>
+          <div className="stat-row compact-stats" aria-label="Professional highlights">
+            <span><b>BMS</b> Engineering</span>
+            <span><b>SA</b> Adelaide</span>
+            <span><b>AI</b> Claude user</span>
           </div>
-        </div>
-      </section>
-
-      <section className="content-section timeline-section" id="timeline">
-        <div className="section-head">
-          <h2>Experience path</h2>
-          <span className="mono">trade background → building controls</span>
-        </div>
-        <div className="timeline motion-card">
-          {timeline.map(([date, label]) => (
-            <div className="timeline-item" key={date}>
-              <span>{date}</span>
-              <p>{label}</p>
-            </div>
-          ))}
         </div>
       </section>
 
       <section className="content-section" id="focus">
         <div className="section-head">
-          <h2>Work focus</h2>
-          <span className="mono">building controls / commissioning / automation</span>
+          <h2>Focus</h2>
+          <span className="mono">controls / dashboards / reliability</span>
         </div>
-        <div className="info-grid">
+        <div className="info-grid compact-grid">
           {workFocus.map((item) => (
             <MiniCard key={item} title="focus" body={item} />
           ))}
@@ -123,56 +69,26 @@ export function ProfileSections() {
       </section>
 
       <section className="content-section home-assistant-section" id="home-assistant">
-        <div className="section-head">
-          <h2>Home Assistant services</h2>
-          <span className="mono">Home Assistant / dashboards / reliability</span>
-        </div>
-        <div className="service-panel motion-card">
+        <div className="service-panel motion-card compact-panel">
           <div>
-            <span className="kicker">{"// Home Assistant services"}</span>
-            <h3>Reliable Home Assistant setups.</h3>
-            <p>
-              Dashboards, automations, integrations, alerts, and remote access
-              configured for everyday reliability.
-            </p>
+            <span className="kicker">Home Assistant</span>
+            <h3>Reliable smart-home setups.</h3>
+            <p>Dashboards, automations, integrations, alerts, and remote access.</p>
           </div>
-          <div className="service-list">
+          <div className="service-list compact-list">
             {homeAssistantServices.map((service) => (
               <span key={service}>{service}</span>
             ))}
           </div>
         </div>
-        <div className="package-grid">
-          {servicePackages.map((pack) => (
-            <article className="package-card motion-card" key={pack.name}>
-              <span className="kicker">{"// service"}</span>
-              <h3>{pack.name}</h3>
-              <p>{pack.detail}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="content-section" id="projects">
-        <div className="section-head">
-          <h2>Projects / lab</h2>
-          <span className="mono">web / GitHub / home lab</span>
-        </div>
-        <div className="info-grid">
-          {projects.map((project) => (
-            <MiniCard key={project} title="lab" body={project} />
-          ))}
-        </div>
       </section>
 
       <section className="content-section contact-section" id="contact">
-        <div className="contact-panel motion-card">
+        <div className="contact-panel motion-card compact-panel">
           <div>
-            <span className="kicker">{"// contact"}</span>
+            <span className="kicker">contact</span>
             <h2>Contact</h2>
-            <p>
-              Discord for quick contact. LinkedIn for work. GitHub for projects.
-            </p>
+            <p>Discord for quick contact. LinkedIn for work. GitHub for projects.</p>
           </div>
           <div className="contact-stack" aria-label="Contact options">
             {contactMethods.map((method) => {

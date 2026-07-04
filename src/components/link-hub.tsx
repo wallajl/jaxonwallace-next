@@ -18,7 +18,8 @@ export function LinkHub() {
     if (!root) return;
 
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduceMotion) return;
+    const compactPhone = window.matchMedia("(max-width: 640px)").matches;
+    if (reduceMotion || compactPhone) return;
 
     const cleanups: Array<() => void> = [];
 
@@ -46,8 +47,7 @@ export function LinkHub() {
         .from(".lead", { y: 18, opacity: 0, duration: 0.55 }, "-=0.35")
         .from(".quick-facts span", { y: 12, opacity: 0, stagger: 0.06, duration: 0.36 }, "-=0.28")
         .from(".cta .btn", { y: 16, opacity: 0, stagger: 0.08, duration: 0.45 }, "-=0.2")
-        .from(".portrait-card", { y: 32, opacity: 0, rotateX: -7, rotateY: -6, duration: 0.9 }, "-=0.7")
-        .from(".scroll-cue", { y: -8, opacity: 0, duration: 0.5 }, "-=0.35");
+        .from(".portrait-card", { y: 32, opacity: 0, rotateX: -7, rotateY: -6, duration: 0.9 }, "-=0.7");
 
       gsap.to(".portrait", {
         backgroundPosition: "55% 42%, 62% 48%, 0 0",
@@ -93,26 +93,7 @@ export function LinkHub() {
         .to(".hero-copy", { y: -46, opacity: 0.72, filter: "blur(1.5px)", ease: "none" }, 0)
         .to(".portrait-card", { y: -72, rotateZ: 1.6, scale: 0.96, ease: "none" }, 0)
         .to(".ambient-orb.one", { xPercent: 22, yPercent: 20, scale: 1.2, ease: "none" }, 0)
-        .to(".ambient-orb.two", { xPercent: -18, yPercent: -14, scale: 1.1, ease: "none" }, 0)
-        .to(".scroll-cue", { opacity: 0, y: 18, ease: "none" }, 0);
-
-      gsap.fromTo(
-        ".scan",
-        { scaleX: 0, opacity: 0, filter: "blur(6px)" },
-        {
-          scaleX: 1,
-          opacity: 1,
-          filter: "blur(0px)",
-          transformOrigin: "center",
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: ".scan",
-            start: "top 90%",
-            end: "top 62%",
-            scrub: 0.5,
-          },
-        },
-      );
+        .to(".ambient-orb.two", { xPercent: -18, yPercent: -14, scale: 1.1, ease: "none" }, 0);
 
       const reveal = gsap.timeline({
         scrollTrigger: {
@@ -227,16 +208,11 @@ export function LinkHub() {
         <SiteNav />
         <main id="top">
           <Hero />
-          <div className="scroll-cue" aria-hidden="true">
-            <span>scroll</span>
-            <i />
-          </div>
-          <div className="scan" />
           <LinkSection />
           <ProfileSections />
         </main>
         <footer className="footer">
-          © {new Date().getFullYear()} Jaxon Wallace · BMS, smart buildings, Home Assistant, and web projects
+          © {new Date().getFullYear()} Jaxon Wallace
         </footer>
       </div>
     </div>

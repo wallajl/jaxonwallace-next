@@ -398,8 +398,8 @@ h1 {
 }
 
 .section {
-  min-height: 82svh;
-  padding: 62px 0 44px;
+  min-height: auto;
+  padding: 44px 0 28px;
   perspective: 1400px;
 }
 
@@ -520,8 +520,12 @@ h2 {
 
 
 .content-section {
-  padding: 38px 0;
+  padding: 30px 0;
   scroll-margin-top: 28px;
+}
+
+.compact-panel {
+  padding: clamp(18px, 3vw, 28px);
 }
 
 .about-panel,
@@ -599,8 +603,12 @@ h2 {
 }
 
 .info-card {
-  min-height: 112px;
-  padding: 16px;
+  min-height: 96px;
+  padding: 15px;
+}
+
+.compact-grid .info-card {
+  min-height: 88px;
 }
 
 .kicker {
@@ -710,6 +718,10 @@ h2 {
   gap: 24px;
   padding: clamp(22px, 4vw, 34px);
   align-items: center;
+}
+
+.compact-list span {
+  padding: 12px;
 }
 
 .service-panel h3,
@@ -911,11 +923,11 @@ h2 {
 
 @media (max-width: 640px) {
   .wrap {
-    width: min(100% - 22px, 1120px);
+    width: min(100% - 18px, 1120px);
   }
 
   .nav {
-    padding: 14px 0;
+    padding: 10px 0;
   }
 
   .brand {
@@ -927,29 +939,39 @@ h2 {
   }
 
   .navlinks a {
-    padding: 8px 10px;
-  }
-
-  .navlinks a[href="#home-assistant"] {
-    display: none;
+    padding: 7px 9px;
+    font-size: 12px;
   }
 
   .hero {
-    gap: 22px;
-    padding: 28px 0 20px;
+    gap: 16px;
+    padding: 18px 0 8px;
   }
 
   h1 {
-    font-size: clamp(42px, 15vw, 62px);
+    font-size: clamp(40px, 14vw, 56px);
     letter-spacing: -1.15px;
+    margin: 14px 0 12px;
   }
 
   .lead {
-    font-size: 16px;
-    line-height: 1.58;
+    font-size: 15px;
+    line-height: 1.48;
+    margin-bottom: 14px;
+  }
+
+  .quick-facts {
+    gap: 7px;
+    margin-bottom: 16px;
+  }
+
+  .quick-facts span {
+    padding: 7px 9px;
+    font-size: 11px;
   }
 
   .portrait-card {
+    max-width: 310px;
     border-radius: 22px;
     padding: 10px;
   }
@@ -960,6 +982,17 @@ h2 {
 
   .links {
     grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .card {
+    min-height: auto;
+    padding: 14px;
+  }
+
+  .desc,
+  .handle {
+    margin-top: 8px;
   }
 
   .section-head {
@@ -985,7 +1018,7 @@ h2 {
 
   .section {
     min-height: auto;
-    padding-top: 42px;
+    padding: 26px 0 18px;
   }
 
   .scroll-cue {
@@ -993,7 +1026,41 @@ h2 {
   }
 
   .content-section {
-    padding: 28px 0;
+    padding: 20px 0;
+  }
+
+  .about-panel,
+  .service-panel,
+  .contact-panel,
+  .info-card,
+  .package-card,
+  .timeline {
+    border-radius: 16px;
+  }
+
+  .about-panel,
+  .service-panel,
+  .contact-panel,
+  .compact-panel {
+    padding: 16px;
+  }
+
+  .about-panel p,
+  .service-panel p,
+  .contact-panel p,
+  .info-card p {
+    line-height: 1.5;
+  }
+
+  .info-card,
+  .compact-grid .info-card {
+    min-height: auto;
+  }
+
+  .service-panel h3,
+  .contact-panel h2 {
+    font-size: clamp(22px, 9vw, 32px);
+    margin-bottom: 10px;
   }
 
   .info-grid,
@@ -1022,6 +1089,10 @@ h2 {
   .contact-actions,
   .contact-stack {
     justify-content: stretch;
+  }
+
+  .contact-method {
+    padding: 13px 42px 13px 13px;
   }
 }
 

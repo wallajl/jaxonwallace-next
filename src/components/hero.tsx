@@ -20,7 +20,6 @@ export function Hero() {
           <span>Schneider Electric</span>
           <span>BMS / HVAC controls</span>
           <span>Claude user</span>
-          <span>St Pat&apos;s Tech old scholar</span>
         </div>
         <div className="cta">
           <a className="btn primary" href="#links">
